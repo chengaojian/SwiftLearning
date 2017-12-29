@@ -16,9 +16,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 测试
+        
+//        func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+//            for item in list {
+//                if condition(item) {
+//                    return true
+//                }
+//            }
+//            return false
+//        }
+//
+//        func lessThanTen(number: Int) -> Bool {
+//            return number < 10
+//        }
+//        var numbers = [20, 19, 7, 12]
+//        hasAnyMatches(list: numbers, condition: lessThanTen)
+//
+//
+        
+        
+        
+        
+        // 定义一个函数，返回一个字符串
+        // 定义一个函数，其中一个参数需要传入一个字符串
+        
+        func getString(listStrs: [String], str: (String)) -> String {
+            var result = ""
+            for item in listStrs {
+                result += item
+            }
+            return result + "\(str)"
+        }
+        
+        func returnStr(str: String) -> String {
+            return "Hello \(str)"
+        }
+        let lists = ["a", "b", "c"]
+        let resultString = getString(listStrs: lists, str: returnStr(str: "world"))
+        print("----- > \(resultString)")
+        
+        
         return true
     }
-
+    
+   
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
